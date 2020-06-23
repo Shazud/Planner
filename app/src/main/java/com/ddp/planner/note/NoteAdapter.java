@@ -3,6 +3,7 @@ package com.ddp.planner.note;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.RelativeLayout;
 import android.widget.TextView;
 
 import androidx.annotation.NonNull;
@@ -15,10 +16,12 @@ import java.util.ArrayList;
 public class NoteAdapter extends RecyclerView.Adapter<NoteAdapter.NoteViewHolder> {
     private ArrayList<Note> mData;
     public static class NoteViewHolder extends RecyclerView.ViewHolder {
-        public TextView textView;
-        public NoteViewHolder(TextView textView) {
-            super(textView);
-            this.textView = textView;
+        TextView textView;
+        RelativeLayout parentLayout;
+        public NoteViewHolder(View v) {
+            super(v);
+            this.textView = v.findViewById(R.id.text);
+            this.parentLayout = v.findViewById(R.id.parent_layout);
         }
     }
 
@@ -29,8 +32,7 @@ public class NoteAdapter extends RecyclerView.Adapter<NoteAdapter.NoteViewHolder
     @NonNull
     @Override
     public NoteViewHolder onCreateViewHolder(@NonNull ViewGroup parent, int viewType) {
-        TextView v = (TextView) LayoutInflater.from(parent.getContext()).inflate(R.layout.activity_main, parent ,false);
-
+        View v = LayoutInflater.from(parent.getContext()).inflate(R.layout.layout_note, parent ,false);
         NoteViewHolder vh = new NoteViewHolder(v);
         return vh;
     }

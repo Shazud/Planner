@@ -35,7 +35,7 @@ public class MainActivity extends AppCompatActivity {
         notes.add(new Note("apple"));
         notes.add(new Note("kiwi"));
         notes.add(new Note("pear"));
-        for(int i=1000 ; i>0 ; i--){
+        for(int i=0 ; i>0 ; i--){
             notes.add(new Note(i + ""));
         }
         return notes;

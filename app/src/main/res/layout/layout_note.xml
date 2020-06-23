@@ -2,15 +2,32 @@
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="wrap_content" android:layout_height="wrap_content"
     android:padding="15dp"
-    android:id="@+id/parent_layout">
-    <TextView
-        android:layout_width="match_parent"
+    android:id="@+id/parent_layout"
+    android:background="@color/colorHighlightMedium"
+    >
+    <LinearLayout
+        android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:id="@+id/text"
-        android:text="Sample Text"
-        android:textSize="17sp"
-        android:layout_marginLeft="5dp"
-        android:layout_marginRight="5dp"
-        android:background="#ff88ff"
-        />
+        android:orientation="vertical">
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/text"
+            android:text="Sample Text"
+            android:textSize="20sp"
+            android:layout_marginLeft="5dp"
+            android:layout_marginRight="5dp"
+            android:textColor="@color/colorPrimaryDark"
+            />
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Sample description some more text here than in the other example asd as das fasd fafgsdfgs dfg sdf gdf ggfgffg."
+            android:layout_marginRight="5dp"
+            android:layout_marginLeft="5dp"
+            android:padding="5dp"
+            android:background="@color/colorHighlightMedium"
+            android:textColor="@color/colorPrimary"
+            />
+    </LinearLayout>
 </RelativeLayout>

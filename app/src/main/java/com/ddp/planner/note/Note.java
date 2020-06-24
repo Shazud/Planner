@@ -2,9 +2,19 @@ package com.ddp.planner.note;
 
 public class Note {
     private String title;
+    private String content="";
 
-    public Note (String title){
+    public Note (String title, String content){
         this.title = title;
+        this.content = content;
+    }
+
+    public String getContent() {
+        return content;
+    }
+
+    public void setContent(String content) {
+        this.content = content;
     }
 
     public String getTitle() {
